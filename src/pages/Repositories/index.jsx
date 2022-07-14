@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import "./style.css"
 
 export function Repositories (){
-    
+    const navigate = useNavigate()
     const [repositories, setRepositories] = useState([])
 
+    const backToHomePage = () => {
+        navigate("/")
+    }
 
     useEffect(() => {
        let repositoriesName = localStorage.getItem('repositoriesName')
@@ -26,6 +30,7 @@ export function Repositories (){
                     )
                 })}                          
             </div>
+            <button onClick = {backToHomePage}>Voltar</button>
        </div>
     </div>
                
