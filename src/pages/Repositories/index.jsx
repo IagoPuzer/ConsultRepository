@@ -1,30 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import "./style.css"
 
 export function Repositories (){
-   
+    
+    const [repositories, setRepositories] = useState([])
+
+
+    useEffect(() => {
+       let repositoriesName = localStorage.getItem('repositoriesName')
+        repositoriesName  = JSON.parse(repositoriesName)
+        setRepositories(repositoriesName)   
+    },[])
+
+
+
     return (
-       <>
-       <h1>Repositórios</h1>
+    <div className="container-repositories">
+       <h1 className="title">Repositórios</h1>
 
-       <div className="repository">
-            <ul>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-                <li>Repositorios</li>
-            </ul>
+        <div className="repository">
+            <div className="list-repositories">
+                {repositories.map(repository => {
+                    return (
+                        <div className="list-item">Repository name: {repository} </div>
+                    )
+                })}                          
+            </div>
        </div>
-
-       </>
-       
-       
-        
+    </div>
+               
       )
 
 }

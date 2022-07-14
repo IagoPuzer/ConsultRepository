@@ -1,0 +1,25 @@
+.container-repositories{
+    width: 100%;
+    max-width: 991px;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    font-size:2rem;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.list-repositories {
+    font-family: sans-serif;
+    padding:0;
+    
+}
+
+.list-item {
+    margin: .5rem 0;
+    background: #000;
+    color: #fff;
+    padding: .5rem
+}

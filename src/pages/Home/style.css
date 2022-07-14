@@ -1,0 +1,38 @@
+.input {
+    border: 1px solid #ddd;
+    height: 4rem;
+    padding: 0 .5rem;
+    border-radius:1.5rem 0 0 1.5rem;
+}
+
+.input:active,
+.input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-input{
+    height: 4rem;
+    width:4.5rem;
+    border: 1px solid #000;
+    background:#000;
+    color: #fff;
+    border-radius: 0 1.5rem 1.5rem 0;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.btn-input:hover{
+    background: rgb(123, 123, 123);
+    border: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
